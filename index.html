@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monster Money</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #0a0a0a;
+      color: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Orbitron', sans-serif;
+      color: #00ff00;
+      text-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+    }
+
+    p {
+      color: #ccc;
+      margin-bottom: 1rem;
+    }
+
+    /* Header Section */
+    .header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 0 40px;
+      text-align: center;
+    }
+
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #00ff00;
+      box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+      transition: transform 0.3s ease;
+    }
+
+    .profile-img:hover {
+      transform: scale(1.05);
+    }
+
+    .brand-name {
+      font-size: 3.5rem;
+      margin: 20px 0;
+      letter-spacing: 2px;
+    }
+
+    .description {
+      font-size: 1.2rem;
+      color: #aaa;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    /* Main Section - Removed CTA button */
+    .main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 30vh;
+      padding: 40px 0;
+      color: #ccc;
+      font-style: italic;
+    }
+
+    /* Telegram Section */
+    .telegram-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 0;
+      background: #000000;
+      border-top: 1px solid #00ff00;
+    }
+
+    .telegram-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #000;
+      color: #00ff00;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.3rem;
+      padding: 15px 30px;
+      border: 2px solid #00ff00;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 15px rgba(0, 255, 0, 0.7);
+      position: relative;
+      overflow: hidden;
+      text-decoration: none;
+    }
+
+    .telegram-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(0, 255, 0, 0.9);
+    }
+
+    .telegram-btn span {
+      display: inline-block;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+
+    .telegram-btn svg {
+      width: 24px;
+      height: 24px;
+      fill: #00ff00;
+    }
+
+    /* Fire Animation */
+    .fire-animation {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .fire-animation.active {
+      opacity: 1;
+    }
+
+    .fire-animation::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(circle, rgba(255, 100, 0, 0.8) 0%, rgba(255, 100, 0, 0) 70%);
+      filter: blur(10px);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .fire-animation.active::after {
+      opacity: 1;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 30px 0;
+      color: #aaa;
+      font-size: 1rem;
+      border-top: 1px solid #00ff00;
+    }
+
+    .footer span {
+      color: #00ff00;
+      text-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .brand-name {
+        font-size: 2.5rem;
+      }
+
+      .telegram-btn {
+        font-size: 1.1rem;
+        padding: 12px 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <div class="container header">
+    <img src="https://i.ibb.co/DDmLJF2k/IMG-20250807-142339.jpg" alt="Profile Picture" class="profile-img" />
+    <h1 class="brand-name">Monster Money</h1>
+    <p class="description">New income strategies revealed daily</p>
+  </div>
+
+  <!-- Main Section - Empty (Join Now removed) -->
+  <div class="container main">
+    <!-- No CTA button -->
+  </div>
+
+  <!-- Telegram Section -->
+  <div class="container telegram-section">
+    <a href="https://t.me/+4rtIT-WyrBlmNzFl" target="_blank" class="telegram-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+      </svg>
+      Join Telegram
+    </a>
+    <div class="fire-animation"></div>
+  </div>
+
+  <!-- Footer -->
+  <div class="container footer">
+    <p>&copy; 2025 | Design by <span>Jogubhai</span></p>
+  </div>
+
+  <script>
+    // Fire animation on hover and click
+    const telegramBtn = document.querySelector('.telegram-btn');
+    const fireAnimation = document.querySelector('.fire-animation');
+
+    telegramBtn.addEventListener('mouseenter', () => {
+      fireAnimation.classList.add('active');
+    });
+
+    telegramBtn.addEventListener('mouseleave', () => {
+      fireAnimation.classList.remove('active');
+    });
+
+    telegramBtn.addEventListener('click', () => {
+      fireAnimation.classList.add('active');
+      setTimeout(() => {
+        fireAnimation.classList.remove('active');
+      }, 300);
+    });
+  </script>
+</body>
+</html>
